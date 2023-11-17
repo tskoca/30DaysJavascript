@@ -119,3 +119,46 @@ Python ve dragon uzunluğunu bulun ve yanlış bir karşılaştırma ifadesi yap
  console.log(!(4 === '4'))
  console.log(!('dragon'.includes('on') && 'phyton'.includes('on')))
  
+
+ /*
+ Use the Date object to do the following activities
+
+    What is the year today?
+    What is the month today as a number?
+    What is the date today?
+    What is the day today as a number?
+    What is the hours now?
+    What is the minutes now?
+    Find out the numbers of seconds elapsed from January 1, 1970 to now.
+ */
+
+    let now = new Date();
+    
+    let nowYear = now.getFullYear();
+    console.log(year);
+    let month = now.getMonth();
+    console.log(month);
+    let date = now.getDate();
+    console.log(date);
+    let today = now.getDay();
+    console.log(today);
+    let hour = now.getHours();
+    console.log(hour);
+    let minutes = now.getMinutes();
+    console.log(minutes);
+    let time = now.getTime();
+    console.log(Math.floor(time/1000)) //  1 Ocak 1970'ten şu ana kadar geçen saniye sayısı
+
+    /*
+  // Calculate milliseconds in a year
+    const minute = 1000 * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const year = day * 365;
+
+  // Divide Time with a year
+    const d = new Date();
+    let years = Math.round(d.getTime() / year);
+    */
+
+      
