@@ -149,6 +149,8 @@ Python ve dragon uzunluğunu bulun ve yanlış bir karşılaştırma ifadesi yap
     let time = now.getTime();
     console.log(Math.floor(time/1000)) //  1 Ocak 1970'ten şu ana kadar geçen saniye sayısı
 
+
+
     /*
   // Calculate milliseconds in a year
     const minute = 1000 * 60;
@@ -161,4 +163,127 @@ Python ve dragon uzunluğunu bulun ve yanlış bir karşılaştırma ifadesi yap
     let years = Math.round(d.getTime() / year);
     */
 
-      
+
+
+
+//Level 2
+
+
+//Write a script that prompt the user to enter base and height 
+//of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+  let base = parseFloat(prompt('Üçgenin Alanını Hesaplamak İçin Lütfen taban değerini giriniz: '));
+  let height = parseFloat(prompt('Üçgenin Alanını Hesaplamak İçin Lütfen yükseklik değerini giriniz: '));
+
+  let area = ((base * height ) * 0.5);
+  console.log(`Hello ${area}`);
+
+
+//Write a script that prompt the user to enter side a, side b, and side c of the triangle
+//and and calculate the perimeter of triangle (perimeter = a + b + c)
+
+  let sideA = parseFloat(prompt("Üçgenin A kenar değerini girin: "));
+  let sideB = parseFloat(prompt("Üçgenin B kenar değerini girin: "));
+  let sideC = parseFloat(prompt("Üçgenin C kenar değerini girin: "));
+
+  let perimeter = sideA + sideB + sideC;
+
+  console.log(`Üçgenin Çevresi ${perimeter}`);
+
+//Get length and width using prompt and calculate an area of rectangle 
+//(area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+ 
+ //Area of rectangle
+
+ let length = parseFloat(prompt('Dikdörtgenin Uzunluğunu Girin: '));
+ let width = parseFloat(prompt('Dikdörtgenin Genişlik Girin: '));
+
+ let areaRectangle = length * width 
+ console.log(`Dikdörtgenin Alanı: ${areaRectangle}`)
+
+  let perimeterRectangle = (2 * (length + width));
+ console.log(`Dikdörtgenin Çevresi: ${perimeterRectangle}`)
+
+//Get radius using prompt and calculate the area of a circle (area = pi x r x r) and 
+//circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+
+ const PI = 3.14;
+ let radius = parseFloat(prompt('Dairenin YarıÇapını Giriniz: '));
+ 
+ let areaCircle = (PI * radius * radius)
+ let circumference = (PI * 2 * radius)
+ console.log(`Dairenin Alanı: ${areaCircle} Dairenin Çevresi ${circumference}`)
+
+
+ 
+ //Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+
+ let x_values = [-3,0,1,2,3]
+ 
+ for(let x of x_values){
+   let y  = x*x + 6*x + 9
+   console.log(`x:${x} , y:${y}`);
+ }
+
+//Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+ 
+ let userHours = parseFloat(prompt('Saat sayısını Giriniz: '));
+ let userRateHour = parseFloat(prompt('Saat başına ücreti Giriniz: '))
+
+ let pay = userHours * userRateHour ;
+
+ console.log(`Haftalık kazancınız: ${pay}`)
+
+//If the length of your name is greater than 7 say, your name is long else say your name is short.
+
+ let userName = prompt('İsminizi Giriniz: ');
+
+ let nameSay = (userName.length > 7) ? 'İsminiz uzun' : 'İsminiz kısa';
+
+ console.log(nameSay)
+
+//Write a script that prompt the user to enter number of years. 
+//Calculate the number of seconds a person can live. Assume some one lives just hundred years
+
+ let years = parseFloat(prompt('Kaç Yıl Yaşadığınız Girin: '));
+ let seconds = years * 60 * 60 * 24 * 365;
+
+ console.log(`Sen ${years} yıl, ${seconds} saniye yaşadın`);
+
+//Create a human readable time format using the Date time object
+
+/*YYYY-MM-DD HH:mm
+DD-MM-YYYY HH:mm
+DD/MM/YYYY HH:mm
+*/
+
+let nowDate = new Date();
+
+ let yearD = nowDate.getFullYear();
+ let months = nowDate.getMonth() +1;
+ let days = nowDate.getDate();
+ let hours = nowDate.getHours(); 
+ let minute = nowDate.getMinutes();
+
+ console.log(`YYYY-MM-DD HH:mm ${yearD} - ${months} - ${days}  ${hours}:${minute}`)
+ console.log(`DD-MM-YYYY HH:mm ${days} - ${months} - ${yearD}  ${hours}:${minute}`)
+ console.log(`DD/MM/YYYY HH:mm ${days}/${months}/${yearD}  ${hours}:${minute}`)
+
+
+//Level 3
+
+
+//Create a human readable time format using the Date time object. 
+//The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+
+//YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+
+let formatDate  = new Date();
+
+let  formatYear = formatDate.getFullYear();
+let formatMonths = String(formatDate.getMonth() + 1).padStart(2,'0');
+let formatDay = String(formatDate.getDate()).padStart(2,'0');
+let formatHours = String(formatDate.getHours()).padStart(2,'0');
+let formatMinute  = String(formatDate.getMinutes()).padStart(2,'0');
+
+console.log(`YYY-MM-DD HH:mm --- ${formatYear}-${formatMonths}-${formatDay} ${formatHours}:${formatMinute} `)
