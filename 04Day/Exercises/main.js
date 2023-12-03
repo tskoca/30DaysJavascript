@@ -68,27 +68,89 @@ ternary operator.
     0-49, F
 */
 
-let score = parseInt(prompt('Lütfen Puanınızı Giriniz:'));
-   console.log('score',score)
- if(score >= 90 && score <= 100 ){
+// let score =parseInt(prompt('Lütfen Puanınızı Giriniz:'));
+//    console.log('score',score)
+//  if(score >= 90 && score <= 100 ){
 
-    console.log('Notunuzun Harf Değeri: A')
- }
- else if(score >= 70 && score < 89){
-    console.log('Notunuzun Harf Değeri: B')
- }
- else if(score >= 60 && score < 69){
-    console.log('Notunuzun Harf Değeri: C')
- }
- else if(score >= 50 && score < 59){
-    console.log('Notunuzun Harf Değeri: D')
- }
- else if(score >= 0 && score < 49){
-   console.log(score)
-    console.log('Notunuzun Harf Değeri: F')
- }
- else{
-    console.log('Geçerli Bir Puan Giriniz.')
- }
+//     console.log('Notunuzun Harf Değeri: A')
+//  }
+//  else if(score >= 70 && score < 89){
+//     console.log('Notunuzun Harf Değeri: B')
+//  }
+//  else if(score >= 60 && score < 69){
+//     console.log('Notunuzun Harf Değeri: C')
+//  }
+//  else if(score >= 50 && score < 59){
+//     console.log('Notunuzun Harf Değeri: D')
+//  }
+//  else if(score >= 0 && score < 49){
+//    console.log(score)
+//     console.log('Notunuzun Harf Değeri: F')
+//  }
+//  else{
+//     console.log('Geçerli Bir Puan Giriniz.')
+//  }
 
 
+/*
+Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+September, October or November, the season is Autumn.
+December, January or February, the season is Winter.
+March, April or May, the season is Spring
+June, July or August, the season is Summer
+*/
+
+// let moon = prompt('Lütfen Ayı Girin: ').toLowerCase();
+
+// switch (moon) {
+//    case 'aralık':
+//    case 'ocak':
+//    case 'şubat':
+//       console.log('Mevsim: Kış..')
+//       break;
+//    case 'mart':
+//    case 'nisan':
+//    case 'mayıs':
+//       console.log('Mevsim: İlkBahar..')
+//       break;
+//    case 'haziran':
+//    case 'temmuz':
+//    case 'ağustos':
+//       console.log('Mevsim: Yaz..')
+//       break;
+//    case 'eylül':
+//    case 'ekim':
+//    case 'kasım':
+//       console.log('Mevsim: Sonbahar..')
+//       break;
+//    default:
+//       console.log('Lütfen Geçerli Bir Ay Giriniz....')
+//       break;
+// }
+
+/* 
+Check if a day is weekend day or a working day. Your script will take day as an input.
+    What is the day  today? Saturday
+    Saturday is a weekend.
+    What is the day today? FrIDAy
+    Friday is a working day.
+*/
+
+let day = prompt('Bugün Hangi Gün').toLowerCase();
+
+switch (day) {
+   case "pazartesi":
+   case "sali":
+   case "çarşamba":
+   case "perşembe":
+   case "cuma":
+      console.log(day.charAt(0).toUpperCase + day.slice(1) + " iş günüdür")
+      break;
+   case "cumartesi":
+   case "pazar":
+      console.log(day.charAt(0).toUpperCase() + day.slice(1) + " hafta sonudur");
+      break;
+   default:
+      console.log('Lütfen Geçerli Bir Gün Giriniz.')
+      break;
+}
