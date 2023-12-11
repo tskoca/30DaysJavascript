@@ -1,4 +1,4 @@
-//Seviye 1
+//Level 1
 
 //1.Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:
 //'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
@@ -57,7 +57,7 @@ ternary operator.
     //     console.log(`Girilen sayı ${number}; tek sayıdır.`)
     // }
 
-//Seviye 2
+//Level 2
 
 /*
  Write a code which can give grades to students according to theirs scores:
@@ -136,21 +136,64 @@ Check if a day is weekend day or a working day. Your script will take day as an 
     Friday is a working day.
 */
 
-let day = prompt('Bugün Hangi Gün').toLowerCase();
+// let day = prompt('Bugün Hangi Gün').toLowerCase();
 
-switch (day) {
-   case "pazartesi":
-   case "sali":
-   case "çarşamba":
-   case "perşembe":
-   case "cuma":
-      console.log(day.charAt(0).toUpperCase + day.slice(1) + " iş günüdür")
+// switch (day) {
+//    case "pazartesi":
+//    case "sali":
+//    case "çarşamba":
+//    case "perşembe":
+//    case "cuma":
+//       console.log(day.charAt(0).toUpperCase + day.slice(1) + " iş günüdür")
+//       break;
+//    case "cumartesi":
+//    case "pazar":
+//       console.log(day.charAt(0).toUpperCase() + day.slice(1) + " hafta sonudur");
+//       break;
+//    default:
+//       console.log('Lütfen Geçerli Bir Gün Giriniz.')
+//       break;
+// }
+
+//Level 3
+
+// Write a program which tells the number of days in a month.
+//   Enter a month: January
+//   January has 31 days.
+
+//   Enter a month: JANUARY
+//   January has 31 day
+
+//   Enter a month: February
+//   February has 28 days.
+
+//   Enter a month: FEbruary
+//   February has 28 days.
+
+let numberForDay = prompt('Ayı Girin: ').toLowerCase();
+
+switch (numberForDay) {
+      case 'ocak':
+      case 'mart':
+      case 'mayıs':
+      case 'temmuz':
+      case 'ağustos':
+      case 'ekim':
+      case 'aralık':
+      console.log(`${numberForDay.charAt(0).toUpperCase() + numberForDay.slice(1)} ayı 31 güne sahiptir.  `)
       break;
-   case "cumartesi":
-   case "pazar":
-      console.log(day.charAt(0).toUpperCase() + day.slice(1) + " hafta sonudur");
+
+      case 'nisan':
+      case'haziran':
+      case 'eylül':
+      case 'kasım':
+      console.log(`${numberForDay.charAt(0).toUpperCase() + numberForDay.slice(1)} ayı 30 güne sahiptir.`)
+      break;
+      case 'şubat':
+      console.log(`${numberForDay.charAt(0).toUpperCase() + numberForDay.slice(1)} ayı 28 güne sahiptir.`)
       break;
    default:
-      console.log('Lütfen Geçerli Bir Gün Giriniz.')
+      console.log('Lütfen Geçerli Bir Ay Giriniz.');
       break;
 }
+
